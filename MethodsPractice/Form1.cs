@@ -22,6 +22,10 @@ namespace MethodsPractice
             /// TODO - Place method calls here
 
             PrintSignature();
+            RectangleArea();
+            AddNumber();
+            FindArea();
+            NumberCheck();
 
         }
 
@@ -33,19 +37,43 @@ namespace MethodsPractice
         }
 
         /// 2. Create a method to calculate the area of a rectangle with
-        /// dimensions 5x7, and then use the variables to display:
+        /// dimensions 5x7, and then use the variables to display: 5 * 7(times)
         /// 
         /// The area of a 5 x 7 rectangle is 35 units squared
 
         public void RectangleArea()
         {
+            int width = 5;
+            int height = 7;
+            int area = (width - height);
 
+            area = width * height;
+
+            q2Output.Text = $"the area of a {width} x {height} is {area} units squared ";
         }
 
         /// 3. Create a method to get numbers from q3Num1Input and q3Num2Input,
         /// add them together, and then display output as follows:
         /// 
         /// 5 + 4 = 9 
+        /// 
+
+        public void AddNumber()
+        {
+            int num1 = Convert.ToInt16(q3Num1Input.Text);
+            int num2 = Convert.ToInt16(q3Num2Input.Text);
+
+           
+
+            int sum = num1 + num2;
+          
+
+
+
+            q3Output.Text = $"{num1} = {num2} = {sum}";
+
+        }
+            
 
 
         
@@ -53,6 +81,22 @@ namespace MethodsPractice
         /// the radius entered in radiusInput, then display output as follows:
         /// 
         /// The area of a circle with radius of 4 is 50.24 units squared
+        /// 
+
+        public void FindArea()
+        {
+            int num1 = Convert.ToUInt16(radiusInput.Text);
+            double pie = 3.14;
+            double area = pie;
+
+            int square = num1 * num1;           
+
+            q4Output.Text = $"the area of the cirlce with radius of {num1} is {area} units squared";
+
+
+
+
+        }
 
 
 
@@ -64,5 +108,38 @@ namespace MethodsPractice
         /// he largest value is 7
 
 
+        public void NumberCheck()
+        {
+            int num1 = Convert.ToInt16(q5Num1Input.Text);
+            int num2 = Convert.ToInt32(q5Num2Input.Text);
+            int num3 = Convert.ToInt32(q5Num3Input.Text);
+
+            int checkNum1 = num2 - num1;
+            int checkNum2 = num3 - num2;
+            int checkNum3 = num1 - num3;
+
+            if (checkNum3 > 0)
+            {
+                q5Output.Text = $"the biggest number is {num1}";
+            }
+            if(checkNum1 > 0)
+            {
+                q5Output.Text = $"thebiggest number is {num2}";
+            }
+            if(checkNum2 > 0)
+            {
+                q5Output.Text = $"the bigget number is {num3}"
+            }
+            
+            
+            
+
+            
+           
+
+            
+
+
+        }
     }
 }
